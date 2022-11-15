@@ -1,8 +1,6 @@
 function MemCardImg({ img, imgAlt }) {
     return (
-        <div id="memCardImg">
-            <img src={ img } alt={ imgAlt } /> 
-        </div>
+        <img src={ `./media/${img}` } alt={ imgAlt } id="memCardImg" /> 
     )
 }
 
@@ -17,7 +15,7 @@ function MemCardTitle({ title }) {
 function MemCard({ cardData, handleCardClick }) {
     const cardClicked = (e) => {
         // console.log(e.target.parentNode);
-        handleCardClick();
+        handleCardClick(e);
     }
 
     return (
