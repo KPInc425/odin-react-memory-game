@@ -71,7 +71,7 @@ function App() {
   ]);
 
   const handleCardClick = (clickedTitle) => {
-    console.log(clickedTitle);
+    // console.log(clickedTitle);
 
     const alreadyClicked = clickedCardArray.find((title) => {
       // console.log(title);
