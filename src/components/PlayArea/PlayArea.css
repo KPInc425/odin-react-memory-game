@@ -1,16 +1,11 @@
-@font-face {
-    font-family: MoonFlowerBold;
-    src: url('./media/fonts/Moon\ Flower\ Bold.ttf');
-}
-
 #playArea {
     display: grid;
     grid-template-columns: repeat(6, 15%);
     grid-template-rows: repeat(2, 50%);
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     background-color: rgb(66, 38, 66);
     border-radius: 8px;
-    height: 80vh;
+    height: 60vh;
     width: 90vw;
     min-width: 980px;
     margin: 20px auto;
@@ -45,7 +40,7 @@
 
 #cardTitle {
     position: relative;
-    font-family: MoonFlowerBold;
+    /* font-family: MoonFlowerBold; */
     font-size: 1.55em;
     font-weight: 600;
     color: rgb(102, 27, 117);

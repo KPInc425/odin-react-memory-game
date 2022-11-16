@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import BestScore from '../BestScore/BestScore';
 import PlayArea from '../PlayArea/PlayArea';
 import Score from '../Score/Score';
+import './App.css';
 
 function App() {
   const [score, setScore] = useState(0);
@@ -112,9 +113,11 @@ function App() {
   return (
     <div className="App">
       <h1>Memba Berries... ReMemba!</h1> 
-      <p>Memba the berry! Don't memba the same berry!</p>
-      <Score score={ score } />
-      <BestScore bestScore={ bestScore } />
+      <p>Memba the berry! Don't memba the same berry twice!</p>
+      <div className="score">
+        <Score score={ score } />
+        <BestScore bestScore={ bestScore } />
+      </div>
       <PlayArea cardsArray={ memCardArray } handleCardClick={ handleCardClick } />
     </div>
   );
