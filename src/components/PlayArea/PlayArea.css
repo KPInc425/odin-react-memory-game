@@ -5,7 +5,7 @@
     /* border: 1px solid blue; */
     background-color: rgb(66, 38, 66);
     border-radius: 8px;
-    height: 60vh;
+    height: 80vh;
     width: 90vw;
     min-width: 980px;
     margin: 20px auto;
@@ -74,8 +74,8 @@
     bottom: 10px;
     left: 50%;
     transform: translate(-50%);
-    height: 50%;
-    width: 90%;
+    height: 40%;
+    width: 70%;
     justify-self: end;
 }
 
