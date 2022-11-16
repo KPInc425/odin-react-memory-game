@@ -1,5 +1,5 @@
 import './PlayArea.css';
-import membaBerry from './media/memba.jpg';
+import membaBerry from './media/images/memba.png';
 
 function MemCardImg({ img, imgAlt }) {
     return (
@@ -9,9 +9,13 @@ function MemCardImg({ img, imgAlt }) {
     )
 }
 
-function MemCardTitle({ title }) {
+function MemCardTitle({ title, handleCardClick }) {
+    const cardClicked = (e) => {
+        // console.log(e.target);
+        handleCardClick(title);
+    }
     return (
-        <div id="cardTitle">
+        <div id="cardTitle" onClick={ cardClicked }>
             <p>{title || "Card Title"}</p>
             <img src={ membaBerry } alt="Memba Berry" />
         </div>
@@ -19,15 +23,10 @@ function MemCardTitle({ title }) {
 }
 
 function MemCard({ cardData, handleCardClick }) {
-    const cardClicked = (e) => {
-        // console.log(cardData.title);
-        handleCardClick(cardData.title);
-    }
-
     return (
-        <div id="memCard" onClick={ cardClicked }>
+        <div id="memCard" >
             <MemCardImg img={ cardData.img } imgAlt={ cardData.imgAlt }/>
-            <MemCardTitle title={ cardData.title }/>
+            <MemCardTitle title={ cardData.title } handleCardClick={ handleCardClick }/>
         </div>
     )
 }

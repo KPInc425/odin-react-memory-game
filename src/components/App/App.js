@@ -91,7 +91,7 @@ function App() {
       setScore(score + 1);
     }
 
-    console.log(clickedCardArray);
+    // console.log(clickedCardArray);
     randomizeCardArray();
   }
 
