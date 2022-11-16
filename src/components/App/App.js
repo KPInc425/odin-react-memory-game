@@ -9,7 +9,7 @@ function App() {
   const [clickedCardArray, setClickedCardArray] = useState([]);
   const [memCardArray, setMemCardArray] = useState([
     {
-      img: "chewbacca.jpg", 
+      img: "chewbacca.png", 
       imgAlt: "Chewbacca",
       title: "Member Chewbacca?"
     },
@@ -24,22 +24,22 @@ function App() {
       title: "Member Jurassic Park?"
     },
     {
-      img: "ghost.jpg", 
+      img: "ghost.png", 
       imgAlt: "Ghostbusters",
       title: "Member Ghostbusters?"
     },
     {
-      img: "spock.jpg", 
+      img: "spock.png", 
       imgAlt: "Spock",
       title: "Member Spock?"
     },
     {
-      img: "jgold.jpg", 
+      img: "jgold.png", 
       imgAlt: "Jeff Goldblum",
       title: "Member Jeff Goldblum"
     },
     {
-      img: "tie.jpg", 
+      img: "tie.png", 
       imgAlt: "TIE Fighters",
       title: "Member TIE Fighters?"
     },
@@ -49,7 +49,7 @@ function App() {
       title: "Member Goonies?"
     },
     {
-      img: "yoda.jpg", 
+      img: "yoda.png", 
       imgAlt: "Yoda",
       title: "Member Yoda?"
     },
@@ -70,17 +70,19 @@ function App() {
     },
   ]);
 
-  const handleCardClick = (e) => {
-    const clickedTitle = e.target.parentNode.lastChild.textContent;
+  const handleCardClick = (clickedTitle) => {
+    console.log(clickedTitle);
 
     const alreadyClicked = clickedCardArray.find((title) => {
-      console.log(title);
+      // console.log(title);
       return title === clickedTitle;
     })
 
     if (alreadyClicked) {
       //Game Over
-      setBestScore(score);
+      if (score > bestScore){
+        setBestScore(score);
+      }
       setScore(0);
       setClickedCardArray([]);
     } else {

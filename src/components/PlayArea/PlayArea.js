@@ -1,21 +1,25 @@
+import './PlayArea.css';
+
 function MemCardImg({ img, imgAlt }) {
     return (
-        <img src={ `./media/${img}` } alt={ imgAlt } id="memCardImg" /> 
+        <div id="memCardImg">
+            <img src={`${process.env.PUBLIC_URL}/assets/images/${img}`} alt={ imgAlt } /> 
+        </div>
     )
 }
 
 function MemCardTitle({ title }) {
     return (
         <div id="cardTitle">
-            {title || "Card Title"}
+            <p>{title || "Card Title"}</p>
         </div>
     )
 }
 
 function MemCard({ cardData, handleCardClick }) {
     const cardClicked = (e) => {
-        // console.log(e.target.parentNode);
-        handleCardClick(e);
+        console.log(cardData.title);
+        handleCardClick(cardData.title);
     }
 
     return (
